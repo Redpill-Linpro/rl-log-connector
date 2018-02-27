@@ -1,6 +1,6 @@
 # Redpill Linpro Log Anypoint Connector
 
-The Redpill Linpro Log Connector simplifies handling of (Log4j2 Thread Context)[https://logging.apache.org/log4j/2.x/manual/thread-context.html].
+The Redpill Linpro Log Connector simplifies handling of [Log4j2 Thread Context](https://logging.apache.org/log4j/2.x/manual/thread-context.html).
 
 It allows for automatically inject application name, message id and correlation id into the thread context. 
 
