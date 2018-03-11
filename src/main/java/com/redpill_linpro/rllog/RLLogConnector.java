@@ -15,7 +15,16 @@ import org.slf4j.LoggerFactory;
 
 import com.redpill_linpro.rllog.config.ConnectorConfig;
 
-@Connector(name="rl-log", friendlyName="RLLog")
+/**
+ * <p>The Redpill Linpro Log Connector simplifies handling of <a href="https://logging.apache.org/log4j/2.x/manual/thread-context.html">Log4j2 Thread Context</a>.</p>
+ * 
+ * <p>It allows for automatically inject application name, message id and correlation id into the thread context. This is done by register a set of Server Notification 
+ * Listeners that will ensure that the correct logging is performed.</p>
+ * 
+ * <p>Besides adding the connector configuration to your application you also need to make sure that your selected Log4j2 layout includes the ThreadContext when writing the logs. 
+ * For more information see the <a href="https://logging.apache.org/log4j/2.x/manual/thread-context.html#Including_the_ThreadContext_when_writing_logs">Log4J documentation</a>.</p>
+ */
+@Connector(name="rl-log", friendlyName="RLLog", description="The Redpill Linpro Log Connector simplifies handling of Log4j2 Thread Context")
 public class RLLogConnector {
 
     @Config

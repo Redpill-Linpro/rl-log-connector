@@ -457,7 +457,7 @@ with Exhibit B.
 Software distributed under the License is distributed on an "AS IS" basis,
 WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the
 specific language governing rights and limitations under the License.
-The Original Code is Redpill Linpro JSON Web Token Connector
+The Original Code is Redpill Linpro Log Connector.
 The Initial Developer of the Original Code is Redpill Linpro. All portions of
 the code are Copyright (c) 2017 Repill Linpro. All Rights Reserved.
 

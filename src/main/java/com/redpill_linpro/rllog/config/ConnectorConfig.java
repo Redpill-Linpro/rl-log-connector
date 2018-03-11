@@ -5,7 +5,7 @@ import org.mule.api.annotations.components.Configuration;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 
-@Configuration(friendlyName = "Configuration")
+@Configuration(friendlyName = "Redpill Linpro Log Connector Configuration")
 public class ConnectorConfig {
 
     /**
@@ -52,7 +52,9 @@ public class ConnectorConfig {
     }
     
     /**
-     * Alternative correlation id 
+     * By default if a incoming request contains the header <code>MULE_CORRELATION_ID</code> 
+     * Mule runtime will set this as the correlation id on the message. This setting allows for using 
+     * an alternative header as correlation id. 
      */
     @Configurable
     @Optional
