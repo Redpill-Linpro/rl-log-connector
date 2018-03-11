@@ -4,7 +4,7 @@
         addCorrelationId="true"
         addMessageId="true"
         alternativeCorrelationId="MySessionId"/>
-<!-- END_INCLUDE(rl-log:greet) -->
+<!-- END_INCLUDE(rl-log:config) -->
 
 <!-- BEGIN_INCLUDE(rl-log:put-into-thread-context-map) -->
     <rl-log:put-into-thread-context-map config-ref="RLLog__Configuration" 
