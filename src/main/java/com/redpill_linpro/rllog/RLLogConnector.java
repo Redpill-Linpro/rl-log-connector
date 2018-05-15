@@ -49,8 +49,15 @@ public class RLLogConnector {
     @Start
     public void customStart() {
         try {
-            this.muleContext.registerListener(new RLLogConnectorMessageNotificationListener(config));
-            this.muleContext.registerListener(new RLLogMessageProcessorNotificationListener(config));
+            if ( config.getAlternativeCorrelationId() != null ) {
+                this.muleContext.registerListener(new RLLogConnectorMessageNotificationListener(config));
+            }
+            if ( config.isAddCorrelationId() 
+                 || config.isAddMessageId()
+                 || config.isAddApplicationName()) {
+                this.muleContext.registerListener(new RLLogMessageProcessorNotificationListener(config));
+            }
+            
         } catch (NotificationException e) {
             logger.error("Failed to register as server notification listener", e);
         }

@@ -2,6 +2,7 @@ package com.redpill_linpro.rllog.config;
 
 import org.mule.api.annotations.Configurable;
 import org.mule.api.annotations.components.Configuration;
+import org.mule.api.annotations.display.Placement;
 import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 
@@ -49,6 +50,21 @@ public class ConnectorConfig {
     }
     public boolean isAddCorrelationId() {
         return addCorrelationId;
+    }
+    
+    /**
+     *
+     */
+    @Configurable
+    @Optional
+    @Default("false")
+    @Placement(tab="Slow Message Processors")
+    private boolean logSlowMessageProcessors;
+    public void setLogSlowMessageProcessors(boolean logSlowMessageProcessors) {
+        this.logSlowMessageProcessors = logSlowMessageProcessors;
+    }
+    public boolean isLogSlowMessageProcessors() {
+        return logSlowMessageProcessors;
     }
     
     /**
