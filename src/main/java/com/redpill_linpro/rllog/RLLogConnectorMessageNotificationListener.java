@@ -29,7 +29,7 @@ public class RLLogConnectorMessageNotificationListener implements ConnectorMessa
             }
         } else if (notification.getAction() == ConnectorMessageNotification.MESSAGE_RESPONSE
                         || notification.getAction() == ConnectorMessageNotification.MESSAGE_ERROR_RESPONSE) {
-                ThreadContext.remove(this.config.getAlternativeCorrelationId());
+                ThreadContext.clearAll();
         }
     }
     
